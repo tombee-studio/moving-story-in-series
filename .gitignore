@@ -1,0 +1,6 @@
+.DS_Store
+*.txt
+excel/*.xlsx
+png/*.png
+venv/
+.idea/

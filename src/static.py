@@ -1,0 +1,1 @@
+COLUMNS = ['story', 'title', 'plays']
