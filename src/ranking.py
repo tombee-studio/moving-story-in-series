@@ -7,6 +7,9 @@ import tqdm
 import pandas as pd
 
 from selenium import webdriver
+from dotenv import load_dotenv
+
+load_dotenv()
 
 EXECUTABLE_PATH = os.getenv('CHROME_DRIVER_EXECUTABLE_PATH')
 
