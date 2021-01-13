@@ -42,7 +42,7 @@ def scrape(title_id, t):
     df = pd.DataFrame(columns=COLUMNS)
 
     driver.get('https://www.b-ch.com/titles/%s/' % title_id)
-    title = driver.title
+    title = re.search(r'([^|]+)\|', driver.title)[1]
     episodes_num = get_episodes_num(driver.find_element_by_id('bch-stories')
                                     .find_elements_by_class_name('bch-c-box-movie'))
     for episode in range(1, episodes_num + 1):
