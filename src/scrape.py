@@ -2,7 +2,9 @@ import time
 import tqdm
 import re
 import sys
+import os
 
+from dotenv import load_dotenv
 from selenium.webdriver.common.by import By
 from static import COLUMNS
 
@@ -12,7 +14,9 @@ from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
 
-EXECUTABLE_PATH = './venv/lib/python3.8/site-packages/chromedriver_binary/chromedriver'
+load_dotenv()
+
+EXECUTABLE_PATH = os.getenv('CHROME_DRIVER_EXECUTABLE_PATH')
 
 options = webdriver.ChromeOptions()
 options.add_argument('--headless')

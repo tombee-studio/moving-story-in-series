@@ -1,3 +1,4 @@
+import os
 import sys
 import re
 import time
@@ -7,7 +8,7 @@ import pandas as pd
 
 from selenium import webdriver
 
-EXECUTABLE_PATH = './venv/lib/python3.8/site-packages/chromedriver_binary/chromedriver'
+EXECUTABLE_PATH = os.getenv('CHROME_DRIVER_EXECUTABLE_PATH')
 
 options = webdriver.ChromeOptions()
 options.add_argument('--headless')
