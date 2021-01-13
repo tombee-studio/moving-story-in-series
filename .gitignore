@@ -1,5 +1,6 @@
 .DS_Store
 *.txt
+!requirements.txt
 excel/*.xlsx
 png/*.png
 venv/
