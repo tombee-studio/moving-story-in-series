@@ -6,3 +6,5 @@ png/*.png
 venv/
 .idea/
 .env
+*.zip
+*.log
